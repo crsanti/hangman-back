@@ -1,0 +1,8 @@
+# node
+node_modules/
+
+#environement variables
+.env
+
+# helpers
+todo
