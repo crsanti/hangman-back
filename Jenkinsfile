@@ -16,12 +16,12 @@ pipeline {
                 }
             }
             steps {
-                sh `'which node'
+                sh 'which node'
                 sh 'node --version'
                 sh 'npm --version'
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'npm install'             
+                sh 'npm install'
                 sh 'npm test'
             }
         }
