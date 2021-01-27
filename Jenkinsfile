@@ -33,6 +33,7 @@ pipeline {
     post {
         always {
             echo 'clean resources'
+            cleanWs()
         }
     }
 }
