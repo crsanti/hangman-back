@@ -10,16 +10,17 @@ pipeline {
             }
         }
         stage('unit test') {
-            // agent any
-            // agent {
-            //     docker {
-            //         image 'node:alpine3.12'
-            //     }
-            // }
+            agent {
+                docker {
+                    image 'node:alpine3.12'
+                }
+            }
             steps {
-                // echo 'run unit tests using Docker container base image'   
-                // sh 'ls -l'
-                // sh '$(npm bin)/jest --help'
+                sh `'which node'
+                sh 'node --version'
+                sh 'npm --version'
+                sh 'pwd'
+                sh 'ls -l'
                 sh 'npm install'             
                 sh 'npm test'
             }
