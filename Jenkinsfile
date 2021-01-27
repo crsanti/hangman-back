@@ -17,7 +17,8 @@ pipeline {
                 }
             }
             steps {
-                echo 'run unit tests using Docker container base image'                
+                echo 'run unit tests using Docker container base image'   
+                sh 'npm install'             
                 sh 'npm test'
             }
         }
