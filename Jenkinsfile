@@ -3,10 +3,14 @@ pipeline {
     stages {
         stage('audit tools') {
             steps {
-                sh '''
-                    docker -v
-                    docker-compose -v
-                '''
+                sh 'which node'
+                sh 'which npm'
+                sh 'node --version'
+                sh 'npm --version'
+                // sh '''
+                //     docker -v
+                //     docker-compose -v
+                // '''
             }
         }
         stage('unit test') {
@@ -16,9 +20,6 @@ pipeline {
                 }
             }
             steps {
-                sh 'which node'
-                sh 'node --version'
-                sh 'npm --version'
                 sh 'pwd'
                 sh 'ls -l'
                 sh 'npm install'
