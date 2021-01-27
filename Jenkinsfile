@@ -11,8 +11,10 @@ pipeline {
         }
         stage('unit test') {
             // agent any
-            docker {
-                image 'node:alpine3.12'
+            agent {
+                docker {
+                    image 'node:alpine3.12'
+                }
             }
             steps {
                 echo 'run unit tests using Docker container base image'                
