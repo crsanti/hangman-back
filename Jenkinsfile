@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo 'run unit tests using Docker container base image'   
                 sh 'ls -l'
+                sh '$(npm bin)/jest --help'
                 sh 'npm install'             
                 sh 'npm test'
             }
