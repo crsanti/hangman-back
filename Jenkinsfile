@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('audit tools') {
             steps {
+                echo 'Pasando'
                 // sh '''
                 //     docker -v
                 //     docker-compose -v
