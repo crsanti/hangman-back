@@ -4,8 +4,8 @@ pipeline {
         stage('audit tools') {
             steps {
                 echo 'Pasando'
-                sh 'docker -v'
-                sh 'docker-compose -v'
+                // sh 'docker -v'
+                // sh 'docker-compose -v'
             }
         }
         stage('unit test') {
